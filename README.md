@@ -1,21 +1,20 @@
-docker-apex
+docker-apex for oracle-xe-11g or oracle-12c
 ============================
-[![Docker Repository on Quay](https://quay.io/repository/maksymbilenko/docker-oracle-apex/status "Docker Repository on Quay")](https://quay.io/repository/maksymbilenko/docker-oracle-apex)
 
-Apex 5.1.2 upgrade package for quay.io/maksymbilenko/oracle-xe-11g and quay.io/maksymbilenko/oracle-12c
+Apex 5.1.2 upgrade package for tekintian/oracle-xe-11g and tekintian/oracle-12c
 
 ### Installation
 
-    docker pull quay.io/maksymbilenko/docker-oracle-apex:5.1.2
+    docker pull tekintian/docker-oracle-apex:5.1.2
 
 Run this to upgrade APEX on you Oracle database container:
 
-    docker run -it --rm --volumes-from ${DB_CONTAINER_NAME} --link ${DB_CONTAINER_NAME}:oracle-database quay.io/maksymbilenko/docker-oracle-apex:5.1.2 install
+    docker run -it --rm --volumes-from ${DB_CONTAINER_NAME} --link ${DB_CONTAINER_NAME}:oracle-database tekintian/docker-oracle-apex:5.1.2 install
     #In that case build woud be with default settings and credentials
 
 Run with custom parameters and credentials:
 
-    docker run -it --rm --volumes-from ${DB_CONTAINER_NAME} --link ${DB_CONTAINER_NAME}:oracle-database -e PASS=SomePassWorD quay.io/maksymbilenko/docker-oracle-apex:5.1.2 install
+    docker run -it --rm --volumes-from ${DB_CONTAINER_NAME} --link ${DB_CONTAINER_NAME}:oracle-database -e PASS=SomePassWorD tekintian/docker-oracle-apex:5.1.2 install
 
 The default list of ENV variables is:
 

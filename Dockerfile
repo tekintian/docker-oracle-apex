@@ -1,6 +1,6 @@
 FROM ubuntu
 
-MAINTAINER Maksym Bilenko <sath891@gmail.com>
+MAINTAINER TekinTian <tekintian@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LD_LIBRARY_PATH /instantclient_12_1
